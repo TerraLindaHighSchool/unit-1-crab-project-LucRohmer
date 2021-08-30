@@ -1,19 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lobster here.
+ * The Lobster is the enemy of the Crab
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Luc Rohmer 
+ * @version 8/30/21
  */
 public class Lobster extends Actor
 {
-    /**
-     * Act - do whatever the Lobster wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    // This method repeats the following actions
     public void act()
     {
-        // Add your action code here.
+        move(3);
+        turnAtEdge();
+    }
+    
+    // Turns the Crab at the edge
+    private void turnAtEdge()
+    {
+        if(isAtEdge())
+        {
+            turn(50);
+        }
     }
 }
