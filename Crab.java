@@ -10,7 +10,7 @@ public class Crab extends Actor
     // This method repeats the following actions
     public void act()
     {
-        move(3);
+        
         turnAtEdge();
         checkKeyPress();
         onCollision();
@@ -31,18 +31,24 @@ public class Crab extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+            setLocation(getX() + 3, getY());
         }
         
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            setLocation(getX() - 3, getY());
         }
         
          if(Greenfoot.isKeyDown("up"))
         {
-            Greenfoot.delay(60);
+            setLocation(getX(), getY() - 3 );
+        } 
+        
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY() + 3 );
         }
+        
     }
     
     // Checks for collisions with other objects
