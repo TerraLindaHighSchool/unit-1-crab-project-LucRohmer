@@ -1,11 +1,11 @@
 import greenfoot.*;
 
 /**
- * This class defines a crab. Crabs live on the beach.
+ * This class defines a Polar bear. Polar bears live on the ice.
  * @author Luc Rohmer
  * @version 8/26/21
  */
-public class Crab extends Actor
+public class PolarBear extends Actor
 {
     // This method repeats the following actions
     public void act()
@@ -17,7 +17,7 @@ public class Crab extends Actor
 
     }
     
-    // Turns the Crab at the edge
+    // Turns the PolarBear at the edge
     private void turnAtEdge()
     {
         if(isAtEdge())
@@ -26,25 +26,25 @@ public class Crab extends Actor
         }
     }
     
-    // Checks for user key presses so user can turn the Crab
+    // Checks for user key presses so user can turn the PolarBear
     private void checkKeyPress()
     {
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("d"))
         {
             setLocation(getX() + 3, getY());
         }
         
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("a"))
         {
             setLocation(getX() - 3, getY());
         }
         
-         if(Greenfoot.isKeyDown("up"))
+         if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(), getY() - 3 );
         } 
         
-        if(Greenfoot.isKeyDown("down"))
+        if(Greenfoot.isKeyDown("s"))
         {
             setLocation(getX(), getY() + 3 );
         }
@@ -54,13 +54,13 @@ public class Crab extends Actor
     // Checks for collisions with other objects
     private void onCollision()
     {
-        if(isTouching(Worm.class))
+        if(isTouching(Fish.class))
         {
-            removeTouching(Worm.class);
+            removeTouching(Fish.class);
             Greenfoot.playSound("slurp.wav");
             
             // Winning the game
-            if(getWorld().getObjects(Worm.class).size()==0)
+            if(getWorld().getObjects(Fish.class).size()==0)
             {
                 Greenfoot.setWorld(new WinSplash());
                 Greenfoot.playSound("fanfare.wav");
@@ -69,6 +69,12 @@ public class Crab extends Actor
         }
         
         if(isTouching(Lobster.class))
+        {
+            Greenfoot.playSound("au.wav");
+            Greenfoot.stop();
+        }
+        
+        if(isTouching(Igloo.class))
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.stop();

@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Lobster is the enemy of the Crab
+ * Write a description of class Worm here.
  * 
- * @author Luc Rohmer 
- * @version 8/30/21
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Lobster extends Actor
+public class Fish extends Actor
 {
     // This method repeats the following actions
     public void act()
@@ -20,7 +20,8 @@ public class Lobster extends Actor
     {
         if(isAtEdge())
         {
-            turn(50);
+            turn(-50);
         }
     }
-}    
+}
+
