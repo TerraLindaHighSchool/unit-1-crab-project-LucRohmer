@@ -8,7 +8,7 @@ public class PolarBearWorld extends World
      */
     public PolarBearWorld() 
     {
-        super(1000, 700, 1);
+        super(800, 700, 1);
         prepare();
     }
     
@@ -36,7 +36,7 @@ public class PolarBearWorld extends World
         addObject(worm7,129,138);
         Fish worm8 = new Fish();
         addObject(worm8,129,414);
-        Lobster lobster = new Lobster();
+        Seal lobster = new Seal();
         addObject(lobster,404,283);
         Igloo igloo = new Igloo();
         addObject(igloo,678,523);
@@ -54,5 +54,26 @@ public class PolarBearWorld extends World
         addObject(igloo7,563,103);
         Igloo igloo8 = new Igloo();
         addObject(igloo8,158,528);
+        removeObject(igloo2);
+        removeObject(igloo6);
+        removeObject(igloo);
+        igloo5.setLocation(616,536);
+        igloo7.setLocation(670,159);
+        igloo3.setLocation(426,336);
+        igloo4.setLocation(218,108);
+        igloo8.setLocation(131,608);
+        igloo5.setLocation(612,546);
+        igloo8.setLocation(184,552);
+
+        
+        igloo4.setLocation(121,105);
+        igloo7.setLocation(658,101);
+        igloo8.setLocation(149,581);
+        igloo5.setLocation(644,551);
+        igloo8.setLocation(172,538);
+        igloo4.setLocation(160,148);
+        igloo7.setLocation(612,137);
+        igloo3.setLocation(404,317);
+        igloo3.setLocation(393,321);
     }
 }

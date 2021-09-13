@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Lobster is the enemy of the Crab
+ * The Seal is the enemy of the Polar Bear
  * 
  * @author Luc Rohmer 
  * @version 8/30/21
  */
-public class Lobster extends Actor
+public class Seal extends Actor
 {
     // This method repeats the following actions
     public void act()
     {
-        move(3);
+        move(Greenfoot.getRandomNumber(17));
         turnAtEdge();
     }
     
@@ -20,7 +20,7 @@ public class Lobster extends Actor
     {
         if(isAtEdge())
         {
-            turn(50);
+            turn(Greenfoot.getRandomNumber(360));
         }
     }
 }    

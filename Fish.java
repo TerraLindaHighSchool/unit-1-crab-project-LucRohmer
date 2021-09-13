@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Worm here.
+ * This class defines a Fish. Fish are the prey of the Polar Bear.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,7 +11,7 @@ public class Fish extends Actor
     // This method repeats the following actions
     public void act()
     {
-        move(3);
+        move(Greenfoot.getRandomNumber(15));
         turnAtEdge();
     }
     
@@ -20,7 +20,7 @@ public class Fish extends Actor
     {
         if(isAtEdge())
         {
-            turn(-50);
+            turn(Greenfoot.getRandomNumber(360));
         }
     }
 }

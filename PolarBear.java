@@ -68,7 +68,7 @@ public class PolarBear extends Actor
             }
         }
         
-        if(isTouching(Lobster.class))
+        if(isTouching(Seal.class))
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.stop();
