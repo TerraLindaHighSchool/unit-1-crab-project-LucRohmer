@@ -11,7 +11,7 @@ public class Seal extends Actor
     // This method repeats the following actions
     public void act()
     {
-        move(Greenfoot.getRandomNumber(17));
+        move(5);
         turnAtEdge();
     }
     

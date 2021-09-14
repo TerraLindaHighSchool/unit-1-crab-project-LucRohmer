@@ -1,29 +1,18 @@
 import greenfoot.*;
 
 /**
- * This class defines a Polar bear. Polar bears live on the ice.
+ * This class defines a Polar bear. Polar bears live on the ice/sea.
  * @author Luc Rohmer
- * @version 8/26/21
+ * @version 9/14/21
  */
 public class PolarBear extends Actor
 {
     // This method repeats the following actions
     public void act()
     {
-        
-        turnAtEdge();
         checkKeyPress();
         onCollision();
 
-    }
-    
-    // Turns the PolarBear at the edge
-    private void turnAtEdge()
-    {
-        if(isAtEdge())
-        {
-            turn(50);
-        }
     }
     
     // Checks for user key presses so user can turn the PolarBear
@@ -57,26 +46,27 @@ public class PolarBear extends Actor
         if(isTouching(Fish.class))
         {
             removeTouching(Fish.class);
-            Greenfoot.playSound("slurp.wav");
+            Greenfoot.playSound("Eat.wav");
             
             // Winning the game
             if(getWorld().getObjects(Fish.class).size()==0)
             {
                 Greenfoot.setWorld(new WinSplash());
-                Greenfoot.playSound("fanfare.wav");
+                Greenfoot.playSound("WinMusic.wav");
                 Greenfoot.stop();
             }
         }
         
         if(isTouching(Seal.class))
         {
-            Greenfoot.playSound("au.wav");
+            Greenfoot.playSound("Hit.wav");
             Greenfoot.stop();
         }
         
-        if(isTouching(Igloo.class))
+        if(isTouching(Rock.class))
         {
-            Greenfoot.playSound("au.wav");
+            Greenfoot.playSound("Lose.wav");
+            Greenfoot.setWorld(new GameOver());
             Greenfoot.stop();
         }
     }

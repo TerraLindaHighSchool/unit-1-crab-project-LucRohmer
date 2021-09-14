@@ -8,8 +8,13 @@ public class PolarBearWorld extends World
      */
     public PolarBearWorld() 
     {
-        super(800, 700, 1);
+        super(800, 600, 1);
         prepare();
+        playloop();
+    }
+    public void playloop()
+    {
+        Greenfoot.playSound("Water.wav");
     }
     
     /**
@@ -38,23 +43,20 @@ public class PolarBearWorld extends World
         addObject(worm8,129,414);
         Seal lobster = new Seal();
         addObject(lobster,404,283);
-        Igloo igloo = new Igloo();
+        Rock igloo = new Rock();
         addObject(igloo,678,523);
-        Igloo igloo2 = new Igloo();
-        addObject(igloo2,765,169);
-        Igloo igloo3 = new Igloo();
+        Rock igloo3 = new Rock();
         addObject(igloo3,351,530);
-        Igloo igloo4 = new Igloo();
+        Rock igloo4 = new Rock();
         addObject(igloo4,253,180);
-        Igloo igloo5 = new Igloo();
+        Rock igloo5 = new Rock();
         addObject(igloo5,610,383);
-        Igloo igloo6 = new Igloo();
+        Rock igloo6 = new Rock();
         addObject(igloo6,872,566);
-        Igloo igloo7 = new Igloo();
+        Rock igloo7 = new Rock();
         addObject(igloo7,563,103);
-        Igloo igloo8 = new Igloo();
+        Rock igloo8 = new Rock();
         addObject(igloo8,158,528);
-        removeObject(igloo2);
         removeObject(igloo6);
         removeObject(igloo);
         igloo5.setLocation(616,536);
@@ -65,7 +67,6 @@ public class PolarBearWorld extends World
         igloo5.setLocation(612,546);
         igloo8.setLocation(184,552);
 
-        
         igloo4.setLocation(121,105);
         igloo7.setLocation(658,101);
         igloo8.setLocation(149,581);
@@ -75,5 +76,44 @@ public class PolarBearWorld extends World
         igloo7.setLocation(612,137);
         igloo3.setLocation(404,317);
         igloo3.setLocation(393,321);
+        igloo3.setLocation(406,441);
+        Fish fish9 = new Fish();
+        addObject(fish9,628,317);
+        Fish fish10 = new Fish();
+        addObject(fish10,517,585);
+        Fish fish11 = new Fish();
+        addObject(fish11,265,598);
+        Fish fish12 = new Fish();
+        addObject(fish12,492,66);
+        Fish fish13 = new Fish();
+        addObject(fish13,702,235);
+        removeObject(igloo4);
+        removeObject(igloo7);
+        removeObject(igloo3);
+        removeObject(igloo5);
+        removeObject(igloo8);
+        removeObject(fish11);
+        removeObject(fish10);
+        fish9.setLocation(663,461);
+        Rock igloo9 = new Rock();
+        addObject(igloo9,320,171);
+        Rock igloo10 = new Rock();
+        addObject(igloo10,579,352);
+        Rock igloo11 = new Rock();
+        addObject(igloo11,230,393);
+        Rock igloo12 = new Rock();
+        addObject(igloo12,572,508);
+        igloo10.setLocation(650,308);
+        igloo9.setLocation(284,152);
+        Fish fish14 = new Fish();
+        addObject(fish14,547,267);
+        Rock rock10 = new Rock();
+        addObject(rock10,487,329);
+        rock10.setLocation(742,329);
+        rock10.setLocation(385,537);
+        rock10.setLocation(666,79);
+        Rock rock15 = new Rock();
+        addObject(rock15,106,527);
+
     }
 }

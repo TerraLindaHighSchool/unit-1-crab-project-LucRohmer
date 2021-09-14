@@ -11,7 +11,7 @@ public class Fish extends Actor
     // This method repeats the following actions
     public void act()
     {
-        move(Greenfoot.getRandomNumber(15));
+        move(Greenfoot.getRandomNumber(7));
         turnAtEdge();
     }
     
